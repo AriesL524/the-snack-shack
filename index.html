@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbf5e9" />
+  <meta name="description" content="The Snack Shack student lunch menu and pickup information." />
+  <title>The Snack Shack | Student lunch menu</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="The Snack Shack home">
+      <span class="brand-mark" aria-hidden="true"><span class="material-symbols-outlined">fastfood</span></span>
+      <span>The Snack Shack</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#pickup">Pickup</a>
+      <a class="nav-order" href="#order">Order <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> We are open today from 11:30 AM to 1:15 PM</p>
+        <h1 id="hero-title">Student lunch<br /><em>menu and pickup.</em></h1>
+      </div>
+      <div class="hero-art">
+        <img class="hero-image" src="images/hero.png" alt="Assortment of packaged snacks and chips" />
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Today's lunch menu</p>
+          <h2 id="menu-title">Menu items available<br />during lunch.</h2>
+        </div>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section class="pickup-section" id="pickup" aria-labelledby="pickup-title">
+      <div class="pickup-content">
+        <p class="eyebrow">Pickup information</p>
+        <h2 id="pickup-title">Pickup location:<br /><em>library entrance.</em></h2>
+        <p class="pickup-copy">Orders are available at the library doors during lunch, by the yellow tablecloth.</p>
+        <div class="pickup-details">
+          <div><span class="detail-icon material-symbols-outlined" aria-hidden="true">location_on</span><span><strong>Library entrance</strong><small>East hallway, ground floor</small></span></div>
+          <div><span class="detail-icon material-symbols-outlined" aria-hidden="true">schedule</span><span><strong>11:30 AM – 1:15 PM</strong><small>Monday through Friday</small></span></div>
+        </div>
+      </div>
+      <div class="map-card" aria-label="Simple map showing the library entrance pickup spot">
+        <div class="map-grid-lines"></div>
+        <div class="map-label map-label-top">MAIN HALL</div>
+        <div class="map-label map-label-bottom">LIBRARY</div>
+        <div class="map-road road-one"></div><div class="map-road road-two"></div>
+        <div class="map-pin"><span class="material-symbols-outlined" aria-hidden="true">location_on</span><small>YOU ARE<br />HERE</small></div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order" aria-labelledby="order-title">
+      <div>
+        <p class="eyebrow">Your pickup order</p>
+        <h2 id="order-title">Order details</h2>
+      </div>
+      <div class="order-panel">
+        <div class="order-panel-top"><span>Your snack bag</span><span id="order-count">0 items</span></div>
+        <div id="order-list" class="order-list"><p class="empty-order">No items have been selected.</p></div>
+        <div class="order-total"><span>Total</span><strong id="order-total">$0.00</strong></div>
+        <button class="button button-dark order-button" id="checkout-button" type="button" disabled>Place my pickup order <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+        <p class="order-fine-print">You can pay when you collect your order.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><span class="material-symbols-outlined">fastfood</span></span><span>The Snack Shack</span></a>
+    <p>Monday through Friday lunch service.</p>
+    <span class="footer-year">© 2026</span>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
